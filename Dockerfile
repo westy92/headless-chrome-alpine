@@ -15,16 +15,23 @@ CMD [ \
   "--disable-default-apps", \
   # Disable all chrome extensions entirely
   "--disable-extensions", \
+  # Disable the GPU hardware acceleration
   "--disable-gpu", \
   # Disable syncing to a Google account
   "--disable-sync", \
   # Disable built-in Google Translate service
   "--disable-translate", \
+  # Run in headless mode
   "--headless", \
+  # Hide scrollbars on generated images/PDFs
+  "--hide-scrollbars", \
   # Disable reporting to UMA, but allows for collection
   "--metrics-recording-only", \
+  # Mute audio
+  "--mute-audio", \
   # Skip first run wizards
   "--no-first-run", \
+  # Expose port 9222 for remote debugging
   "--remote-debugging-port=9222", \
   # Disable fetching safebrowsing lists, likely redundant due to disable-background-networking
   "--safebrowsing-disable-auto-update", \
