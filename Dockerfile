@@ -4,7 +4,7 @@ RUN apk add --no-cache chromium
 
 EXPOSE 9222
 
-ENTRYPOINT ["chromium"]
+ENTRYPOINT ["chromium-browser"]
 
 # flags from https://github.com/GoogleChrome/lighthouse/blob/master/chrome-launcher/flags.ts
 CMD [ \
@@ -35,4 +35,6 @@ CMD [ \
   "--remote-debugging-port=9222", \
   # Disable fetching safebrowsing lists, likely redundant due to disable-background-networking
   "--safebrowsing-disable-auto-update", \
+  # avoid Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed
+  "--no-sandbox", \
 ]
