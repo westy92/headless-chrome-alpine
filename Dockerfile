@@ -4,7 +4,7 @@ RUN apk add --no-cache chromium
 
 EXPOSE 9222
 
-ENTRYPOINT ["chromium"]
+ENTRYPOINT ["chromium-browser"]
 
 # flags from https://github.com/GoogleChrome/lighthouse/blob/master/chrome-launcher/flags.ts
 CMD [ \
