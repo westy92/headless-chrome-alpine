@@ -38,4 +38,6 @@ CMD [ \
   "--remote-debugging-port=9222", \
   # Disable fetching safebrowsing lists, likely redundant due to disable-background-networking
   "--safebrowsing-disable-auto-update", \
+  # avoid Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed
+  "--no-sandbox", \
 ]
