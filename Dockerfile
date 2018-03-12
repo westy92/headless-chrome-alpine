@@ -1,12 +1,12 @@
 FROM alpine:edge
 
-RUN apk add --no-cache chromium
+RUN apk --no-cache upgrade && apk add --no-cache chromium
 
 EXPOSE 9222
 
 ENTRYPOINT ["chromium-browser"]
 
-# flags from https://github.com/GoogleChrome/lighthouse/blob/master/chrome-launcher/flags.ts
+# flags from https://github.com/GoogleChrome/chrome-launcher/blob/master/src/flags.ts
 CMD [ \
   # Disable various background network services, including extension updating,
   #   safe browsing service, upgrade detector, translate, UMA
@@ -31,6 +31,9 @@ CMD [ \
   "--mute-audio", \
   # Skip first run wizards
   "--no-first-run", \
+  # Disable sandbox mode
+  # TODO get this running without it
+  "--no-sandbox", \
   # Expose port 9222 for remote debugging
   "--remote-debugging-port=9222", \
   # Disable fetching safebrowsing lists, likely redundant due to disable-background-networking
