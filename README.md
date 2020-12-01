@@ -20,3 +20,7 @@ docker build -t headless-chrome-alpine --no-cache .
 ```
 docker run headless-chrome-alpine
 ```
+
+### Publishing
+
+Images are automatically built and published using Docker's Automated Builds.
