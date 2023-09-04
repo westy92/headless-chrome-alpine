@@ -12,16 +12,18 @@ Make sure your changes build and run:
 
 ### Building
 
-```
-docker build -t headless-chrome-alpine --no-cache .
+```bash
+docker build -t westy92/headless-chrome-alpine --no-cache .
 ```
 
 ### Running
 
-```
-docker run headless-chrome-alpine
+```bash
+docker run westy92/headless-chrome-alpine
 ```
 
 ### Publishing
 
-Images are automatically built and published using Docker's Automated Builds.
+```bash
+docker push westy92/headless-chrome-alpine
+```
